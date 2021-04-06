@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/messageImageImageView"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_account_circle_36" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/nameMessageTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                tools:text="name" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/messageImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@color/design_default_color_primary"
+                android:scaleType="fitCenter" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/messengerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                tools:text="Message" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

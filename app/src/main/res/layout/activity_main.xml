@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,13 +7,13 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/messagesRecycleView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/linearLayoutBox"/>
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/boxLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,29 +22,29 @@
         android:layout_alignParentStart="true"
         android:orientation="horizontal">
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/addMessageImageView"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@drawable/ic_add_24dp"/>
 
-        <android.support.v7.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/messageEditText"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"/>
 
-        <android.support.v7.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/sendButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:enabled="false"
-            android:text="SEND"/>
-    </android.support.v7.widget.LinearLayoutCompat>
+            android:text="@string/button_send"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <android.support.v4.widget.ContentLoadingProgressBar
+    <androidx.core.widget.ContentLoadingProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         style="?android:attr/progressBarStyleLarge"
@@ -52,4 +52,4 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
 
-</android.support.design.circularreveal.CircularRevealRelativeLayout>
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>
