@@ -1,17 +1,27 @@
 package com.example.kotlinchat
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var firebaseAuth : FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        firebaseAuth = FirebaseAuth.getInstance()
 
+        if (firebaseAuth.currentUser == null) {
+            startActivity(Intent(this, SignActivity::class.java))
+            finish()
+            return
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
