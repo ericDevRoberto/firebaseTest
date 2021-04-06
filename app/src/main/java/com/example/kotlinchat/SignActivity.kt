@@ -61,7 +61,9 @@ class SignActivity : AppCompatActivity() {
 
     private fun signIn() {
         val signInIntent = signInClient.signInIntent
-        startActivityForResult(signInIntent, RC_SIGN_IN)
+        startActivityForResult(signInIntent,
+            RC_SIGN_IN
+        )
     }
 
     private fun firebaseAuthWithGoogle(acct: GoogleSignInAccount) {
